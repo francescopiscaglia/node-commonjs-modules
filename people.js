@@ -1,13 +1,5 @@
-/* 
-
-
-3 - people.js*
-All'interno della tua funzione, usa le tue due funzioni precedenti per costruire l'oggetto.
-
-*/
-
 // Importa la tua funzione da names.js
-const person = require("./name.js");
+const person = require("./names.js");
 
 // Importa la tua funzione da hobbies.js
 const hobbies = require("./hobbies.js");
@@ -18,7 +10,7 @@ const hobbies = require("./hobbies.js");
 
 // invoco le funzioni importate
 const getName = person("Francesco", "Piscaglia");
-const getHobbies = hobbies("1", "2", "3");
+const getHobbies = hobbies("Tech", "Nba", "Videogames");
 
 function singlePerson() {
     return {
