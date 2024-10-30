@@ -8,16 +8,17 @@ const hobbies = require("./hobbies.js");
 // Crea una funzione che non ha parametri. 
 // La funzione dovrebbe restituire un oggetto con tre proprietà: "firstName", "lastName", "hobbies".
 
-// invoco le funzioni importate
-const getName = person("Francesco", "Piscaglia");
-const getHobbies = hobbies("Tech", "Nba", "Videogames");
 
 function singlePerson() {
-    return {
-        firstName: getName.firstName,
-        lastName: getName.lastName,
-        hobbies: getHobbies.hobbies
-    };
+
+    // invoco le funzioni importate
+    const getName = person("Francesco", "Piscaglia");
+    const getHobbies = hobbies("Tech", "Nba", "Videogames");
+
+    // creo un nuovo oggetto con le proprietá delle funzioni
+    const newUser = {...getName, ...getHobbies};
+
+    return newUser;
 };
 
 const me = singlePerson();
